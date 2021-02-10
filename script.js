@@ -22,6 +22,7 @@ function addBookToLibrary(e) {
 
   let book = new Book(title, author, pages, read);
   myLibrary.push(book);
+  saveToLocal();
   updateDisplay();
   closeModal();
 }
@@ -70,6 +71,7 @@ function createBookCard(book){
   }
   readDiv.addEventListener('click', ()=>{
     book.read = !book.read;
+    saveToLocal();
     updateDisplay();
   });
 
@@ -85,6 +87,7 @@ function createBookCard(book){
       return false;
     }
   })
+    saveToLocal();
     updateDisplay();
   });
   
@@ -139,6 +142,18 @@ function filterBooks(e){
     }
     
   })
-
 }
+
+//local Storage
+function saveToLocal(){
+  localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+}
+
+function restoreLocal() {
+  myLibrary = JSON.parse(localStorage.getItem("myLibrary"));
+  if (myLibrary === null) myLibrary = [];
+  updateDisplay();
+}
+
+restoreLocal();
 
