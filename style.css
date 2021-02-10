@@ -2,7 +2,7 @@
 *::before,
 *::after{
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 body{
@@ -22,30 +22,87 @@ header{
     color: white;
 }
 
-h1{
-    margin-left: 2em;
-}
+  h1{
+      margin-left: 2em;
+  }
 
-#searchbar{
-    font-size: 1em;
-    margin-left: 10em;
-    padding: 1em 2em;
-    width: 25%;
-    outline: none;
-}
+  #searchbar{
+      font-size: 1em;
+      margin-left: 10em;
+      padding: 1em 2em;
+      width: 25%;
+      outline: none;
+  }
 
-#blue-text{
-    color: rgb(0, 160, 175);
-}
+  #blue-text{
+      color: rgb(0, 160, 175);
+  }
 
 .container{
     width: 90%;
     margin: 5em auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
 }
+.book-card{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 1em;
+  margin: 1em 1em;
+  font-size: 1rem;
+  border: 10px solid rgb(112, 0, 0);
+  border-radius: 40px;
+  min-width: 15em;
+  max-width: 15em;
+  height: 20em;
+  background-color: rgb(205, 231, 255);
+  color: rgb(2, 73, 2);
+  position: relative;
+}
+    .title-div{
+      font-size: 2rem;
+      font-weight: bold;
+      flex-wrap: wrap;
+      margin-top: 1em;
+      text-align: center;
+    }
+
+
+    .read-div{
+      margin-top: 1em;
+      background-color: rgb(0, 172, 37);
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 1em 1.5em;
+      cursor: pointer;
+    }
+    .remove-div{
+      position: absolute;
+      top: 1em;
+      right: 1em;
+    }
+    .remove-btn{
+      color: rgb(0, 0, 0);
+      font-size: 2rem;
+      outline: none;
+      background: none;
+      border: none;
+    }
+
+    .remove-btn:hover{
+      cursor: pointer;
+      color: rgb(255, 255, 255);
+    }
+
 #new-book-button{
     display:flex;
     align-items: center;
     padding: 1em 1em;
+    margin: 1em 1em;
     border: 10px solid rgba(0,0,0,0.5);
     border-radius: 40px;
     width: 15em;
@@ -54,14 +111,14 @@ h1{
     cursor: pointer;
 
 }
-#new-book-button > p {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-}
-#new-book-button:hover{
-    background-color: rgb(206, 206, 206);
-}
+    #new-book-button > p {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    #new-book-button:hover{
+        background-color: rgb(206, 206, 206);
+    }
 
 .modal{
   display: none;
@@ -75,89 +132,116 @@ h1{
   background-color: rgba(0,0,0,0.5);
 }
 
-.modal-content{
-  background-color: #f4f4f4;
-  margin: 5% auto;
-  width: 30%;
+      .modal-content{
+        background-color: #f4f4f4;
+        margin: 5% auto;
+        width: 30%;
 
-}
-.close-button{
-  color: white;
-  font-size: 2rem;
-  outline: none;
-  background: none;
-  border: none;
-}
-.close-button:hover, 
-.close-button:focus{
-  cursor: pointer;
-  color: rgb(0,0,0);
-  text-decoration: none;
+      }
+      .close-button{
+        color: white;
+        font-size: 2rem;
+        outline: none;
+        background: none;
+        border: none;
+      }
+      .close-button:hover, 
+      .close-button:focus{
+        cursor: pointer;
+        color: rgb(0,0,0);
+        text-decoration: none;
 
-}
-.modal-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(2, 73, 2);
-  color: white;
-  padding: 1em;
-  font-size: 1.6rem;
-  font-weight: bold;
+      }
+      .modal-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(2, 73, 2);
+        color: white;
+        padding: 1em;
+        font-size: 1.6rem;
+        font-weight: bold;
 
-}
+      }
 
-.modal-body{
-  padding: 2em;
-}
-.form-div{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 1em;
-  font-size: 1.5rem;
-}
-.form-div-read{
-  display: flex;
-  margin: 1em;
-  font-size: 1.5rem;
-  justify-content: center;
-  align-items: center;
-}
-.form-div-submit{
-  display: flex;
-  justify-content: center;
-}
+      .modal-body{
+        padding: 2em;
+      }
+      .form-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 1em;
+        font-size: 1.5rem;
+      }
+      .form-div-read{
+        display: flex;
+        margin: 1em;
+        font-size: 1.5rem;
+        justify-content: center;
+        align-items: center;
+      }
+      .form-div-read > label{
+        margin-right: 1em;
+      }
+      .form-div-submit{
+        display: flex;
+        justify-content: center;
+      }
 
-#submit-button{
-  margin: 1em auto;
-  width: 90%;
-  padding: 1em 2em;
-  font-size: 1.5rem;
-  font-weight: bold;
-  background-color: rgb(2, 73, 2);
-  color: white;
-  outline: none;
-  border: none;
-  cursor: pointer;
-}
-.form-div > input{
-  padding: 0.5em 1em;
-  font-size: 1.5rem;
-}
-#read{
-  padding: 2em;
-}
-
-
-
-
-
+      #submit-button{
+        margin: 1em auto;
+        width: 90%;
+        padding: 1em 2em;
+        font-size: 1.5rem;
+        font-weight: bold;
+        background-color: rgb(2, 73, 2);
+        color: white;
+        outline: none;
+        border: none;
+        cursor: pointer;
+      }
+      .form-div > input{
+        padding: 0.5em 1em;
+        font-size: 1.5rem;
+      }
+      #read{
+        padding: 2em;
+      }
 
 
 
 @media (max-width:880px){
   .modal-content{
     min-width: 90%;
+  }
+  header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: 1;
+    background-color: rgb(2, 73, 2);
+    padding: 1em 1em;
+    font-family: sans-serif;
+    color: white;
+  }
+  h1{
+    margin: auto;
+  }
+
+  #searchbar{
+    font-size: 1em;
+    margin: auto;
+    padding: 1em 2em;
+    width: 90%;
+    outline: none;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+  }
+  #submit-button{
+    font-size: 1rem;
   }
 }
