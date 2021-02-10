@@ -57,7 +57,7 @@ header{
   border-radius: 40px;
   min-width: 15em;
   max-width: 15em;
-  height: 20em;
+  height: auto;
   background-color: rgb(205, 231, 255);
   color: rgb(2, 73, 2);
   position: relative;
@@ -136,6 +136,8 @@ header{
         background-color: #f4f4f4;
         margin: 5% auto;
         width: 30%;
+        animation-name: modalOpen;
+        animation-duration: 300ms;
 
       }
       .close-button{
@@ -184,6 +186,10 @@ header{
       .form-div-read > label{
         margin-right: 1em;
       }
+      #read{
+        width: 2em;
+        height: 2em;
+      }
       .form-div-submit{
         display: flex;
         justify-content: center;
@@ -208,6 +214,15 @@ header{
       #read{
         padding: 2em;
       }
+
+@keyframes modalOpen{
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
 
 
 
