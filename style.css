@@ -9,6 +9,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: rgb(221, 221, 221);
+    line-height: 1.6;
 }
 
 header{
@@ -20,11 +21,11 @@ header{
     font-family: sans-serif;
     color: white;
 }
+
 h1{
     margin-left: 2em;
-    outline: none;
-    cursor: pointer;
 }
+
 #searchbar{
     font-size: 1em;
     margin-left: 10em;
@@ -32,6 +33,7 @@ h1{
     width: 25%;
     outline: none;
 }
+
 #blue-text{
     color: rgb(0, 160, 175);
 }
@@ -56,4 +58,106 @@ h1{
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
+}
+#new-book-button:hover{
+    background-color: rgb(206, 206, 206);
+}
+
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content{
+  background-color: #f4f4f4;
+  margin: 5% auto;
+  width: 30%;
+
+}
+.close-button{
+  color: white;
+  font-size: 2rem;
+  outline: none;
+  background: none;
+  border: none;
+}
+.close-button:hover, 
+.close-button:focus{
+  cursor: pointer;
+  color: rgb(0,0,0);
+  text-decoration: none;
+
+}
+.modal-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(2, 73, 2);
+  color: white;
+  padding: 1em;
+  font-size: 1.6rem;
+  font-weight: bold;
+
+}
+
+.modal-body{
+  padding: 2em;
+}
+.form-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em;
+  font-size: 1.5rem;
+}
+.form-div-read{
+  display: flex;
+  margin: 1em;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.form-div-submit{
+  display: flex;
+  justify-content: center;
+}
+
+#submit-button{
+  margin: 1em auto;
+  width: 90%;
+  padding: 1em 2em;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: rgb(2, 73, 2);
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.form-div > input{
+  padding: 0.5em 1em;
+  font-size: 1.5rem;
+}
+#read{
+  padding: 2em;
+}
+
+
+
+
+
+
+
+
+@media (max-width:880px){
+  .modal-content{
+    min-width: 90%;
+  }
 }

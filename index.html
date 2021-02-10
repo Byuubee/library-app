@@ -18,6 +18,48 @@
 
     </section>
 
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <div class="title">New Book</div>
+                <button class="close-button">&times;</button>
+            </div>
+
+            <div class="modal-body">
+
+                  <form id="book-form">
+                      <div class="form-div">
+                          <label for="title">Title</label>
+                          <input type="text" id="title" class="form-input" required>
+                      </div>
+                      <div class="form-div">
+                          <label for="author">Author</label>
+                          <input type="text" id="author" class="form-input" required>
+                      </div>
+                      <div class="form-div">
+                          <label for="pages">Number of Pages</label>
+                          <input type="number" id="pages" class="form-input" required>
+                      </div>
+                      <div class="form-div-read">
+                          <label for="read">Read</label>
+                          <input type="checkbox" id="read" class="form-input">
+                      </div>
+                      <div class="form-div-submit">
+                        <input type="submit" value="Add Book to Library" id="submit-button">
+                      </div>
+                  </form>
+
+            </div>
+        </div>
+        
+      </div>
+    
+        
+
+    
+
 <script src="script.js"></script>
 </body>
 </html>
